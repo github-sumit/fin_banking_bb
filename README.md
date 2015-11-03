@@ -21,3 +21,5 @@ Backbase allows to develop widgets based portal.
 ###Environment variables
 JAVA_HOME pointing to Java 1.7
 MAVEN_OPTS -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC
+
+#Development
