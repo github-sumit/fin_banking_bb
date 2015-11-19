@@ -23,8 +23,9 @@ Make sure the initial steps for local code setup is followed.
 
 ##2. Deploy Project on Tomcat server
     
-    1. Open the pom.xml in webapps folder (/ArchetypeProject/webapps).
-    2. Add the tomcat-maven-plugin entry under build tag
+1. Open the pom.xml in webapps folder (/ArchetypeProject/webapps).
+2. Add the tomcat-maven-plugin entry under build tag  
+```xml
         <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
@@ -74,8 +75,8 @@ Make sure the initial steps for local code setup is followed.
                     </dependency>
                 </dependencies>
             </plugin>
-            
-            Refer to pom.xml in the files folder.(Add link later)
+```            
+            Refer to [pom.xml](https://github.com/github-sumit/fin_banking_bb/blob/master/files/pom.xml) in the files folder.
             
    3. Deploy the project to tomcat using the following maven command.
         
@@ -85,19 +86,20 @@ Make sure the initial steps for local code setup is followed.
         
    4. Stop the tomcat server.
   
-   5. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names.
+   5. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names:
   
-        |Project	|Path in configuration folder	|Context file name in tomcat |
-        |:--------|:----------------------------|:---------------------------|
-        |portalserver	|fip_banking_bb-master\configuration\ target\ configuration\local\tomcat\portal	| portalserver.xml |
-        |contentservices	|fip_banking_bb-master\configuration\ target\configuration\local\tomcat\contentservices | contentservices.xml |
-        |orchestrator	|fip_banking_bb-master\configuration\target\ configuration\local\tomcat\orchestrator |  orchestrator.xml |
+| Project  	| Path in configuration folder  	| Context file name in tomcat   |  
+|:--------:|:----------------------------:|:---------------------------:|  
+| portalserver	   | fip_banking_bb-master\configuration\ target\ configuration\local\tomcat\portal 	| portalserver.xml  |  
+| contentservices 	  | fip_banking_bb-master\configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
+| orchestrator    | fip_banking_bb-master\configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
         
    6. Start the tomcat server.
   
    7.	The application should be deployed.
   
    8.	Open the following URL 
+   
         http://localhost:8080/manager/html
         
    9.	Enter the username/password in the pop-up, mentioned in **tomcat-users.xml**  file.
@@ -105,4 +107,5 @@ Make sure the initial steps for local code setup is followed.
   10.	Applications should be successfully deployed in tomcat manager with **Running** value as true .
   
   11.	Once the server is successfully started, open the following  URL:
-        http://localhost:8080/portalserver/
+  
+       http://localhost:8080/portalserver/
