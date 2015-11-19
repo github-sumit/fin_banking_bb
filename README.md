@@ -26,19 +26,16 @@ Backbase allows to develop widgets based portal.
 ###Environment variables
 1. JAVA_HOME = jdk_home_directory
 
-    On Windows environment,
-      Right click on My Computer -> Properties -> Advance system settings -> Environmental Variables.
+ *On Windows environment,Right click on My Computer -> Properties -> Advance system settings -> Environmental Variables.
        
       **JAVA_HOME** = C:\Program Files\Java\jdk1.7.0_80
 
 2. Set **M2_HOME** and **MAVEN_OPTS** in environment variables 
 
-    M2_HOME = maven_home_directory
-    
-    **Eg:-**
-      M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
+ *   M2_HOME = maven_home_directory
+ *   **Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
 
-    MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC
+ *  MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC
     
 3. Set following in **PATH** variable in environment variables
 
