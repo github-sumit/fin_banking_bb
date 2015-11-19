@@ -39,16 +39,16 @@ Backbase allows to develop widgets based portal.
 
 3. Set following in **PATH** variable in environment variables
 
-* jdk_bin_directory = %JAVA_HOME%\bin     
-* maven_bin_directory = %M2_HOME%\bin
-* npm = C:\Users\[user-name]\AppData\Roaming\npm (npm folder created at this location by default when nodejs is installed)
-* git_bin_directory = C:\Program Files (x86)\Git\bin
-* git_command_directory = C:\Program Files (x86)\Git\cmd
-   
-Eg:-  
-PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
-    
- > **NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable.**      
+    * jdk_bin_directory = %JAVA_HOME%\bin       
+    * maven_bin_directory = %M2_HOME%\bin  
+    * npm = C:\Users\[user-name]\AppData\Roaming\npm (npm folder created at this location by default when nodejs is installed)  
+    * git_bin_directory = C:\Program Files (x86)\Git\bin  
+    * git_command_directory = C:\Program Files (x86)\Git\cmd    
+  
+    > **NOTE:** npm path and git directory path is set while installation. Add the path if not present in PATH variable.  
+ 
+    Eg:-  
+      PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
 
 4. Confirm environment variable settings. On Windows , open command prompt and execute below commands
 
@@ -74,7 +74,7 @@ PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Progr
 2. Maven is going to prompt for some details:
     
     •	A group id – a unique package identifier, e.g. com.backbase.training.      
-    •	An artifact id – a name for your project. This is also the name of the folder where your project will be stored. e.g. FirstBackbaseProject      
+    •	An artifact id – a name for your project. The name of the folder where your project will be stored.e.g. FirstBackbaseProject      
     •	A version number and a package name – you can accept the defaults.      
     •	A launchpad edition – a collection to install; use **universal**.      
     •	A launchpad version – a launchpad version to install. This article has been tested with version **0.13.1**.
@@ -89,7 +89,8 @@ PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Progr
     
 i. Open the settings.xml file under  maven local repository  folder (.m2) 
   
-> **NOTE:** If settings.xml is not at the above location, then copy the file from files folder to .m2 folder.
+> **NOTE:** If settings.xml is not at the above location, then copy the file from files folder to .m2 folder.  
+  Refer to [settings.xml](https://github.com/github-sumit/fin_banking_bb/blob/master/files/settings.xml) in files folder.
     
 ii. Add the backbase plugins and servers entries in settings.xml,if the entries are missing  :
 
@@ -158,7 +159,7 @@ ii. Add the backbase plugins and servers entries in settings.xml,if the entries 
  
           "registry": "http://launchpad.backbase.com:5678"
           
-Refer to .bowerrc file in files folder. 
+Refer to [.bowerrc](https://github.com/github-sumit/fin_banking_bb/blob/master/files/.bowerrc) file in files folder. 
  
 ##3. Perform build of all the modules
 On Windows,go to the command prompt and run the maven command on the root project:
