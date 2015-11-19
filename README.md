@@ -26,43 +26,36 @@ Backbase allows to develop widgets based portal.
 ###Environment variables
 1. JAVA_HOME = jdk_home_directory
 
- *On Windows environment,Right click on My Computer -> Properties -> Advance system settings -> Environmental Variables.
+On Windows environment,Right click on My Computer -> Properties -> Advance system settings -> Environmental Variables.
        
       **JAVA_HOME** = C:\Program Files\Java\jdk1.7.0_80
 
 2. Set **M2_HOME** and **MAVEN_OPTS** in environment variables 
 
- *   M2_HOME = maven_home_directory
- *   **Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
+*  M2_HOME = maven_home_directory
+    **Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
 
- *  MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC
+*  MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC
     
 3. Set following in **PATH** variable in environment variables
 
-    jdk_bin_directory = %JAVA_HOME%\bin 
-     
-    maven_bin_directory = %M2_HOME%\bin 
+jdk_bin_directory = %JAVA_HOME%\bin     
+maven_bin_directory = %M2_HOME%\bin 
+npm = C:\Users\[user-name]\AppData\Roaming\npm (npm folder created at this location by default when nodejs is installed)
+git_bin_directory = C:\Program Files (x86)\Git\bin
+git_command_directory = C:\Program Files (x86)\Git\cmd
+   
+Eg:- 
+PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\A613165\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
     
-    npm = C:\Users\[user-name]\AppData\Roaming\npm (npm folder created at this location by default when nodejs is installed)
-    
-    git_bin_directory = C:\Program Files (x86)\Git\bin
-    
-    git_command_directory = C:\Program Files (x86)\Git\cmd
-    
-    Eg:-
-        PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\A613165\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
-    
-    **NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable. **        
+**NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable.**        
 
 5. Confirm environment variable settings. On Windows , open command prompt and execute below commands
 
-      javac –version
-      
-      mvn –version
-      
-      npm version
-      
-      git  --version
+javac –version
+mvn –version
+npm version
+git  --version
 
 6. Install Bower.
 
