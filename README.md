@@ -48,7 +48,7 @@ Backbase allows to develop widgets based portal.
 Eg:-  
 PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
     
-> **NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable.**        
+ > **NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable.**      
 
 4. Confirm environment variable settings. On Windows , open command prompt and execute below commands
 
@@ -181,7 +181,7 @@ On Windows, goto base archetype project and run the default start script **run.b
     C:\Workspace\Archetype> run.bat 
   
 
-  The project will start on jetty server and H2 database.  
+  The project will start on **jetty** server and **H2** database.  
   
   Once the server is successfully started, open the following  URL:    
   
