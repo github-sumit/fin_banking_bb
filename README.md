@@ -156,7 +156,6 @@ ii. Add the backbase plugins and servers entries in settings.xml,if the entries 
  
  ii. Open **.bowerrc** file under \statics\collection location and remove the registry entry.
  
-          Below line:
           "registry": "http://launchpad.backbase.com:5678"
           
 Refer to .bowerrc file in files folder. 
@@ -185,7 +184,8 @@ On Windows, goto base archetype project and run the default start script **run.b
   The project will start on jetty server and H2 database.  
   
   Once the server is successfully started, open the following  URL:    
-            http://localhost:7777/portalserver/
+  
+      http://localhost:7777/portalserver/
 
 ##Module descriptions
 
