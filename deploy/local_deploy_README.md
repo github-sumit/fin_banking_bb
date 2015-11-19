@@ -76,7 +76,7 @@ Make sure the initial steps for local code setup is followed.
                 </dependencies>
             </plugin>
 ```            
-            Refer to [pom.xml](https://github.com/github-sumit/fin_banking_bb/blob/master/files/pom.xml) in the files folder.
+       Refer to [pom.xml](https://github.com/github-sumit/fin_banking_bb/blob/master/files/pom.xml) in the files folder.
             
    3. Deploy the project to tomcat using the following maven command.
         
