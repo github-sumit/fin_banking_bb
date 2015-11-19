@@ -85,7 +85,7 @@ Backbase allows to develop widgets based portal.
     Open the settings.xml file under  maven local repository  folder (.m2) 
     ###NOTE: If settings.xml is not at the above location, then copy the file from files folder to .m2 folder.
     
-   Add the backbase plugins and servers entries in settings.xml :
+   Add the backbase plugins and servers entries in settings.xml,if the entries are missing  :
    <profiles>
     <profile>
       <id>backbase</id>
