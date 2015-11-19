@@ -1,0 +1,123 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	
+	<!--
+	<proxies>    
+		<proxy>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>proxyconf.my-it-solutions.net</host>
+			<port>8080</port>
+			<nonProxyHosts>localhost</nonProxyHosts>
+		</proxy>
+	</proxies>
+	-->
+	<!--
+	<proxies>
+		<proxy>
+			<id>ATOS proxy</id>
+			<active>true</active>
+			<protocol>http</protocol>
+			<host>proxy-de.glb.my-it-solutions.net</host>
+			<port>84</port>
+			<username>A613150</username>
+			<password>Atos@1234</password>
+		</proxy>
+	</proxies>
+	-->
+
+	<!--
+    <profiles>
+        <profile>
+            <id>backbase</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            
+			<repositories>
+                <repository>
+                    <id>Backbase Artifact Repository</id>
+                    <url>https://repo.backbase.com/repo/</url>					
+                </repository>
+            </repositories>
+			-->
+            <!--
+			<pluginRepositories> 
+                <pluginRepository>
+                    <id>Backbase Artifact Repository</id>
+                    <url>https://repo.backbase.com/repo/</url>					
+                </pluginRepository>
+            </pluginRepositories>
+			
+			
+        </profile>
+    </profiles>
+		
+	<servers>
+        <server>
+            <id>Backbase Artifact Repository</id>
+            <username>atos_portal_p5</username>
+            <password>atos_portal_1654</password>
+        </server>
+    </servers>
+	
+	-->
+	
+	<profiles>
+    <profile>
+      <id>backbase</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <!-- Main product repository -->
+        <repository>
+          <id>repo.backbase.com</id>
+          <url>https://repo.backbase.com/repo/</url>
+        </repository>
+        <!-- Internal development repository is due to mobile services until it gets properly released -->
+        <repository>
+          <id>artifacts.backbase.com</id>
+          <url>https://repo.backbase.com/repo/</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>repo.backbase.com</id>
+          <url>https://repo.backbase.com/repo/</url>
+        </pluginRepository>
+      </pluginRepositories>      
+    </profile>
+    <properties>
+      <downloadSources>true</downloadSources>
+      <downloadJavadocs>true</downloadJavadocs>
+    </properties>
+  </profiles>
+
+<!-- and next to this tag the authorization config -->
+
+	<servers>
+		<!-- Main product repository -->
+		<server>
+		  <id>repo.backbase.com</id>
+		  <!--Please change your_user_name and your_password below-->
+		  <username>atos_portal_p5</username>
+		  <password>atos_portal_1654</password>
+		</server>
+   <!-- Internal development repository is due to mobile services until it gets properly released -->
+		<server>
+		  <id>artifacts.backbase.com</id>
+		  <!--Please change your_user_name and your_password below-->
+		  <username>atos_portal_p5</username>
+		  <password>atos_portal_1654</password>
+		</server>
+  </servers>
+  
+  <pluginGroups>
+	  <pluginGroup>org.apache.tomcat.maven</pluginGroup>
+  </pluginGroups>
+
+	
+</settings>
