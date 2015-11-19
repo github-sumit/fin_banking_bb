@@ -37,7 +37,7 @@ Backbase allows to develop widgets based portal.
 **Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
     
 *  MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC  
-    
+
 3. Set following in **PATH** variable in environment variables
 
 * jdk_bin_directory = %JAVA_HOME%\bin     
@@ -53,10 +53,10 @@ PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Progr
 
 4. Confirm environment variable settings. On Windows , open command prompt and execute below commands
 
-javac –version  
-mvn –version  
-npm version  
-git  --version  
+    javac –version  
+    mvn –version  
+    npm version  
+    git  --version  
 
 5. Install Bower.
 
@@ -69,26 +69,22 @@ git  --version
 
 1. Create an **archetype** project using below command
 
-      mvn archetype:generate -DarchetypeArtifactId=launchpad-archetype-CXP5.6 -DarchetypeGroupId=com.backbase.launchpad -DarchetypeVersion=1.0.2
+        mvn archetype:generate -DarchetypeArtifactId=launchpad-archetype-CXP5.6 -DarchetypeGroupId=com.backbase.launchpad -DarchetypeVersion=1.0.2
 
 
 2. Maven is going to prompt for some details:
     
-    •	A group id – a unique package identifier, e.g. com.backbase.training.
-    
-    •	An artifact id – a name for your project. This is also the name of the folder where your project will be stored. e.g. FirstBackbaseProject
-    
-    •	A version number and a package name – you can accept the defaults.
-    
-    •	A launchpad edition – a collection to install; use **universal**.
-    
+    •	A group id – a unique package identifier, e.g. com.backbase.training.      
+    •	An artifact id – a name for your project. This is also the name of the folder where your project will be stored. e.g. FirstBackbaseProject      
+    •	A version number and a package name – you can accept the defaults.      
+    •	A launchpad edition – a collection to install; use **universal**.      
     •	A launchpad version – a launchpad version to install. This article has been tested with version **0.13.1**.
 
 
 3. Confirm the values entered by entering **y**, or type **n** to change them. After confirmation, a project structure will be created.
 
 
- The next steps in order to setup this project locally.
+#Follow the next stepsto setup this project locally.
    
 ##1. Setup Maven Repository
     
@@ -153,6 +149,7 @@ ii. Add the backbase plugins and servers entries in settings.xml,if the entries 
                 <password>atos_portal_1654</password>
             </server>
         </servers>
+```
   
 ##2. Setup Project for bower dependency download
 
@@ -165,7 +162,7 @@ ii. Add the backbase plugins and servers entries in settings.xml,if the entries 
           
 Refer to .bowerrc file in files folder. 
  
-##2. Perform build of all the modules 
+##2. Perform build of all the modules
 On Windows,go to the command prompt and run the maven command on the root project:
 
       mvn clean package -Pclean-database
@@ -178,7 +175,7 @@ Make sure the build is successful.
   •	Contentservices
   •	Portalserver
     
-GoTo /webapps in base archetype project and run the default prepare script **a default prepare script ** for each module
+GoTo /webapps in base archetype project and run the default prepare script **initial_build.bat** for each module
     
 ##4. Run required modules 
 On Windows, goto base archetype project and run the default start script **run.bat**.
@@ -189,28 +186,20 @@ On Windows, goto base archetype project and run the default start script **run.b
 
   The project will start on jetty server and H2 database.  
   
-  Once the server is successfully started, open the following  URL:
-  
+  Once the server is successfully started, open the following  URL:    
           http://localhost:7777/portalserver/
 
 ##Module descriptions
 
 Here is list if all Maven modules together with its description:
 
-configuration contains all project configurations.
-
-contentservices is customized *contentservices module able to run as standalone service.
-
-dist produces distribution of all modules.
-
-orchestrator is customized *orchestrator module able to run as standalone service.
-
-portal is backbase portal module.
-
-services is parent module for all Integration services.
-
-statics is parent module for all web static assets packaged as Backbase bundles.
-    
+configuration contains all project configurations.  
+contentservices is customized *contentservices module able to run as standalone service.  
+dist produces distribution of all modules.  
+orchestrator is customized *orchestrator module able to run as standalone service.  
+portal is backbase portal module.  
+services is parent module for all Integration services.  
+statics is parent module for all web static assets packaged as Backbase bundles.      
 cxp-exports is the cxp-manager launchpad.
       
  
