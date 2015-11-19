@@ -140,7 +140,15 @@ Backbase allows to develop widgets based portal.
       <password>atos_portal_1654</password>
     </server>
    </servers>
-   
+  
+##2. Setup Project for bower dependency download
+ 	   i. Navigate to the project location.
+     ii. Open .bowerrc file under \statics\collection location and remove the registry entry.
+          Below line:
+          "registry": "http://launchpad.backbase.com:5678"
+          
+         Refer to .bowerrc file in files folder. 
+ 
 ##2. Perform build of all the modules 
     On Windows,go to the command prompt and run the maven command on the root project:
 
