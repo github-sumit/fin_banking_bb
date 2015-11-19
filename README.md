@@ -36,30 +36,29 @@ Backbase allows to develop widgets based portal.
 
 **Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
     
-*  MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC
+*  MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC  
     
 3. Set following in **PATH** variable in environment variables
 
-*jdk_bin_directory = %JAVA_HOME%\bin     
-*maven_bin_directory = %M2_HOME%\bin
-*npm = C:\Users\[user-name]\AppData\Roaming\npm (npm folder created at this location by default when nodejs is installed)
-*git_bin_directory = C:\Program Files (x86)\Git\bin
-*git_command_directory = C:\Program Files (x86)\Git\cmd
+* jdk_bin_directory = %JAVA_HOME%\bin     
+* maven_bin_directory = %M2_HOME%\bin
+* npm = C:\Users\[user-name]\AppData\Roaming\npm (npm folder created at this location by default when nodejs is installed)
+* git_bin_directory = C:\Program Files (x86)\Git\bin
+* git_command_directory = C:\Program Files (x86)\Git\cmd
    
-Eg:- 
-
+Eg:-  
 PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
     
 > **NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable.**        
 
-5. Confirm environment variable settings. On Windows , open command prompt and execute below commands
+4. Confirm environment variable settings. On Windows , open command prompt and execute below commands
 
-javac –version
-mvn –version
-npm version
-git  --version
+javac –version  
+mvn –version  
+npm version  
+git  --version  
 
-6. Install Bower.
+5. Install Bower.
 
    On Windows, Open  command prompt and execute the command
    
