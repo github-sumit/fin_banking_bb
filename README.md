@@ -48,7 +48,7 @@ Backbase allows to develop widgets based portal.
     > **NOTE:** npm path and git directory path is set while installation. Add the path if not present in PATH variable.  
  
     Eg:-  
-      PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
+    PATH=%JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\DasID\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
 
 4. Confirm environment variable settings. On Windows , open command prompt and execute below commands
 
@@ -174,7 +174,7 @@ Make sure the build is successful.
   •	Contentservices  
   •	Portalserver  
     
-GoTo /webapps in base archetype project and run the default prepare script **initial_build.bat** for each module
+Goto /webapps in base archetype project and run the default prepare script **initial_build.bat** for each module
     
 ##5. Run required modules 
 On Windows, goto base archetype project and run the default start script **run.bat**.
