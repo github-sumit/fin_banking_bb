@@ -20,21 +20,21 @@ Backbase allows to develop widgets based portal.
 6. Git (https://nodejs.org/en/)
 7. Nodejs and npm (https://nodejs.org/en/)
 8. Bower
-7. Apache Tomcat 7.0.65
+9. Apache Tomcat 7.0.65
 
 
 ###Environment variables
 1. JAVA_HOME = jdk_home_directory
 
-On Windows environment,Right click on My Computer -> Properties -> Advance system settings -> Environmental Variables.
+  On Windows environment,Right click on My Computer -> Properties -> Advance system settings -> Environmental Variables.
        
-      **JAVA_HOME** = C:\Program Files\Java\jdk1.7.0_80
+      JAVA_HOME = C:\Program Files\Java\jdk1.7.0_80
 
 2. Set **M2_HOME** and **MAVEN_OPTS** in environment variables 
 
 *  M2_HOME = maven_home_directory
-    **Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
-
+**Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5
+    
 *  MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC
     
 3. Set following in **PATH** variable in environment variables
@@ -48,14 +48,14 @@ git_command_directory = C:\Program Files (x86)\Git\cmd
 Eg:- 
 PATH = %JAVA_HOME%\bin;%M2_HOME%\bin;C:\Users\A613165\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd; 
     
-**NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable.**        
+> **NOTE: npm path and git directory path is set while installation. Add the path if not present in PATH variable.**        
 
 5. Confirm environment variable settings. On Windows , open command prompt and execute below commands
 
-javac –version
-mvn –version
-npm version
-git  --version
+  javac –version
+  mvn –version
+  npm version
+  git  --version
 
 6. Install Bower.
 
@@ -93,10 +93,10 @@ git  --version
     
 i. Open the settings.xml file under  maven local repository  folder (.m2) 
   
-  **NOTE:** If settings.xml is not at the above location, then copy the file from files folder to .m2 folder.
+> **NOTE:** If settings.xml is not at the above location, then copy the file from files folder to .m2 folder.
     
 ii. Add the backbase plugins and servers entries in settings.xml,if the entries are missing  :
-      
+     ```xml 
         <profiles>                
           <profile>
             <id>backbase</id>
