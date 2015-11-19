@@ -30,10 +30,10 @@ Backbase allows to develop widgets based portal.
        
       JAVA_HOME = C:\Program Files\Java\jdk1.7.0_80
 
-2. Set **M2_HOME** and **MAVEN_OPTS** in environment variables 
+2. Set **M2_HOME** and **MAVEN_OPTS** in environment variables  
 
-      M2_HOME = maven_home_directory      
-      MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC  
+        M2_HOME = maven_home_directory      
+        MAVEN_OPTS = -Xmx512m -XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC  
       
     **Eg:-**M2_HOME = C:\Users\DasID\..\apache-maven-3.2.5    
 
