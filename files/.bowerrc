@@ -1,0 +1,13 @@
+{
+    "analytics": false,
+    "interactive": true,
+    "resolvers": [
+        "filesystem-bower-resolver",
+        "bb-bower-resolver"
+    ],
+    "storage": {
+        "packages": "target/.bower/packages",
+        "registry": "target/.bower/registry",
+        "links": "target/.bower/links"
+    }
+}
