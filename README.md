@@ -161,32 +161,31 @@ ii. Add the backbase plugins and servers entries in settings.xml,if the entries 
           
 Refer to .bowerrc file in files folder. 
  
-##2. Perform build of all the modules
+##3. Perform build of all the modules
 On Windows,go to the command prompt and run the maven command on the root project:
 
       mvn clean package -Pclean-database
 
 Make sure the build is successful.
  
-##3. Prepare required modules for local development
+##4. Prepare required modules for local development
     
-  •	Orchestrator
-  •	Contentservices
-  •	Portalserver
+  •	Orchestrator  
+  •	Contentservices  
+  •	Portalserver  
     
 GoTo /webapps in base archetype project and run the default prepare script **initial_build.bat** for each module
     
-##4. Run required modules 
+##5. Run required modules 
 On Windows, goto base archetype project and run the default start script **run.bat**.
     
-    Eg:
     C:\Workspace\Archetype> run.bat 
   
 
   The project will start on jetty server and H2 database.  
   
   Once the server is successfully started, open the following  URL:    
-          http://localhost:7777/portalserver/
+            http://localhost:7777/portalserver/
 
 ##Module descriptions
 
