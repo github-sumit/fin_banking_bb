@@ -1,4 +1,4 @@
-# Local environment deploy on Tomcat and H2 database README
+# Local environment deploy on Tomcat and MySQL database README
 
 Make sure the initial steps for local code setup is followed.
 
