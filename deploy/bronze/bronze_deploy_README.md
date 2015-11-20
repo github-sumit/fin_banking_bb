@@ -208,11 +208,11 @@ Make sure the initial steps for local code setup is followed.
   
    3. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names:
   
-     | **Project**  	| **Path in configuration folder**  	| **Context file name in tomcat**   |  
-     |:--------:|:----------------------------:|:---------------------------:|  
-     | portalserver	   | fip_banking_bb-master\configuration\ target\ configuration\local\tomcat\portal 	| portalserver.xml  |  
-     | contentservices 	  | fip_banking_bb-master\configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
-     | orchestrator    | fip_banking_bb-master\configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
+    | **Project**  	| **Path in configuration folder**  	| **Context file name in tomcat**   |  
+    |:--------:|:----------------------------:|:---------------------------:|  
+    | portalserver	   | fip_banking_bb-master\configuration\ target\ configuration\local\tomcat\portal 	| portalserver.xml  |  
+    | contentservices 	  | fip_banking_bb-master\configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
+    | orchestrator    | fip_banking_bb-master\configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
         
    4. Start the tomcat server.
   
