@@ -2,9 +2,16 @@
 
 Make sure the initial steps for local code setup is followed.
 
+#Prerequisites
+
+##Environment Requirements:  
+  Apache Tomcat 7.0.65
+
 ##1. Configure Tomcat
 
-   1. Open the **tomcat-users.xml** file under ..\apache-tomcat-7.0.65\conf and add below  role and users
+   1. Install Tomcat.  
+   
+   2. Open the **tomcat-users.xml** file under ..\apache-tomcat-7.0.65\conf and add below  role and users
 
         <role rolename="manager-gui"/>
         <role rolename="manager-script"/> 

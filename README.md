@@ -20,7 +20,7 @@ Backbase allows to develop widgets based portal.
 6. Git (https://nodejs.org/en/)
 7. Nodejs and npm (https://nodejs.org/en/)
 8. Bower
-9. Apache Tomcat 7.0.65
+
 
 
 ###Environment variables
@@ -43,7 +43,8 @@ Backbase allows to develop widgets based portal.
     * maven_bin_directory = %M2_HOME%\bin  
     * npm = C:\Users\[user-name]\AppData\Roaming\npm (npm folder created at this location by default when nodejs is installed)  
     * git_bin_directory = C:\Program Files (x86)\Git\bin  
-    * git_command_directory = C:\Program Files (x86)\Git\cmd    
+    * git_command_directory = C:\Program Files (x86)\Git\cmd   
+    
   
     > **NOTE:** npm path and git directory path is set while installation. Add the path if not present in PATH variable.  
  
@@ -83,7 +84,7 @@ Backbase allows to develop widgets based portal.
 3. Confirm the values entered by entering **y**, or type **n** to change them. After confirmation, a project structure will be created.
 
 
-#Follow the next stepsto setup this project locally.
+###Follow the next stepsto setup this project locally.
    
 ##1. Setup Maven Repository
     
