@@ -124,13 +124,13 @@ Make sure the initial steps for local code setup is followed.
    
    9. Create 5 schemas for Backbase.  
    
-     | **Schema**  	| **Project**  	|   
-     |:--------:|:------------------:|  
-     | portalfoundation	   | portalserver 	|   
-     | contentservices 	  | contentservices  |  
-     | dbresources    | contentservices  |  
-     | configuration    | contentservices  |  
-     | orchestrator    | orchestrator  |    
+    | **Schema**  	| **Project**  	|     
+    |:--------:|:------------------:|    
+    | portalfoundation	   | portalserver 	|     
+    | contentservices 	  | contentservices  |    
+    | dbresources    | contentservices  |    
+    | configuration    | contentservices  |    
+    | orchestrator    | orchestrator  |      
    
    10. Double-click on each of the schema name to connect and run the **.ddl** and **.sql** scripts to populate the database respectively.  
    
