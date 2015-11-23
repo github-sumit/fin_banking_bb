@@ -87,15 +87,20 @@ Make sure the initial steps for local code setup is followed.
                                                                                       
     Refer to [pom.xml](https://github.com/github-sumit/fin_banking_bb/blob/master/deploy/local/pom.xml) in the files folder. 
             
-3. Deploy the project to tomcat using the following maven command.
+3. Goto the base project.   
+    **e.g.:** /Archetype
+
+5. Deploy the project to tomcat using the following maven command.
         
         mvn clean package tomcat7:deploy
         
     Make sure the tomcat server is started before executing this command.
         
-4. Stop the tomcat server.
+6. Stop the tomcat server.
+>   **Note:** This step is required because tomcat will throws error while deployment of required modules as the context files are missing.Ignore the errors
+              and continue with the further steps.
   
-5. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names:
+7. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names:
   
   | Project  	| Path in configuration folder  	| Context file name in tomcat   |  
   |:--------:|:----------------------------:|:---------------------------:|  
@@ -103,18 +108,18 @@ Make sure the initial steps for local code setup is followed.
   | contentservices 	  | fip_banking_bb-master\configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
   | orchestrator    | fip_banking_bb-master\configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
         
-6. Start the tomcat server.
+8. Start the tomcat server.
   
-7.	The application should be deployed.
-  
-8.	Open the following URL 
+9.	The application should be deployed.
+
+10.	Open the following URL 
    
         http://localhost:8080/manager/html
         
-9.	Enter the username/password in the pop-up, mentioned in **tomcat-users.xml**  file.
+11.	Enter the username/password in the pop-up, mentioned in **tomcat-users.xml**  file.
   
-10.	Applications should be successfully deployed in tomcat manager with **Running** value as true .
+12.	Applications should be successfully deployed in tomcat manager with **Running** value as true .
   
-11.	Once the server is successfully started, open the following  URL:
+13.	Once the server is successfully started, open the following  URL:
   
        http://localhost:8080/portalserver/

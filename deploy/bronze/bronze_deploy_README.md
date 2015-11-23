@@ -198,13 +198,15 @@ Make sure the initial steps for local code setup is followed.
       
 ##5. Deploy required modules to tomcat  
             
-   1. Deploy the project to tomcat using the following maven command.
+   1. Goto base project and deploy the project to tomcat using the following maven command.
         
           mvn clean package tomcat7:deploy
         
       Make sure the tomcat server is started before executing this command.
         
    2. Stop the tomcat server.
+>   **Note:** This step is required because tomcat will throws error while deployment of required modules as the context files are missing.Ignore the errors
+              and continue with the further steps.
   
    3. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names:
   
