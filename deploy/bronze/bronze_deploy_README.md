@@ -10,15 +10,21 @@ Make sure the initial steps for local code setup is followed.
         <role rolename="manager-script"/> 
         <user username="tomcat" password="tomcat" roles="manager-gui,manager-script"/>
 
-   2. Add the following entry within servers definition in settings.xml of maven :
+   2. Add the following entry within servers definition in settings.xml of maven (.m2 folder) :
         
         <server>
          <id>TomcatServer</id>
 	       <username> tomcat </username>
 	       <password> tomcat </password>			
         </server>
-        
-   3. Goto bin folder in tomcat and run **start.bat** to start the tomcat server.    
+   
+   3. Add the following entry in settings.xml of Maven(.m2 folder)
+   
+        <pluginGroups>
+	           <pluginGroup>org.apache.tomcat.maven</pluginGroup>
+        </pluginGroups>     
+          
+   4. Goto bin folder in tomcat and run **start.bat** to start the tomcat server.    
    
 ##2. Add Tomcat server to required modules
     
