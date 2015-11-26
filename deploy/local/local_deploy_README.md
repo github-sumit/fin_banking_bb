@@ -17,7 +17,7 @@ Make sure the initial steps for local code setup is followed.
         <role rolename="manager-script"/> 
         <user username="tomcat" password="tomcat" roles="manager-gui,manager-script"/>
 
-   2. Add the following entry within servers definition in settings.xml of maven (.m2 folder) :
+   3. Add the following entry within servers definition in settings.xml of maven (.m2 folder) :
         
         <server>
          <id>TomcatServer</id>
@@ -25,13 +25,22 @@ Make sure the initial steps for local code setup is followed.
 	       <password> tomcat </password>			
         </server>
         
-   3. Add the following entry in settings.xml of Maven(.m2 folder)
+   4. Add the following entry in settings.xml of Maven(.m2 folder)
    
         <pluginGroups>
 	           <pluginGroup>org.apache.tomcat.maven</pluginGroup>
-        </pluginGroups>     
+        </pluginGroups>   
+          
         
-   4. Goto bin folder in tomcat and run **start.bat** to start the tomcat server.        
+   5. Add then following **CATALINA_OPTS** entry in the **catalina.bat** file under bin folder of tomcat just below setlocal.
+    
+        echo %CATALINA_OPTS%  
+        set CATALINA_OPTS=-XX:PermSize=512m -XX:MaxPermSize=512m  
+        
+
+    >   **Note:**This step is necessary to avoid OutOfMemory exception while deployment. 
+    
+   6. Goto bin folder in tomcat and run **start.bat** to start the tomcat server.        
 
 
 ##2. Deploy Project on Tomcat server
@@ -96,28 +105,32 @@ Make sure the initial steps for local code setup is followed.
 3. Goto the base project.   
     **e.g.:** /Archetype
 
-5. Deploy the project to tomcat using the following maven command.
+4. Deploy the project to tomcat using the following maven command.
         
         mvn clean package tomcat7:deploy
         
     Make sure the tomcat server is started before executing this command.
         
-6. Stop the tomcat server.
+5. Stop the tomcat server.
 >   **Note:** This step is required because tomcat will throws error while deployment of required modules as the context files are missing.Ignore the errors
               and continue with the further steps.
   
-7. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names:
+6. Copy the context file from the project configuration path to apache-tomcat-7.0.65\conf\Catalina\localhost in tomcat and rename to the following names:
   
   | Project  	| Path in configuration folder  	| Context file name in tomcat   |  
   |:--------:|:----------------------------:|:---------------------------:|  
-  | portalserver	   | fip_banking_bb-master\configuration\ target\ configuration\local\tomcat\portal 	| portalserver.xml  |  
-  | contentservices 	  | fip_banking_bb-master\configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
-  | orchestrator    | fip_banking_bb-master\configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
+  | portalserver	   | \configuration\ target\ configuration\local\tomcat\portal 	| portalserver.xml  |  
+  | contentservices 	  | \configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
+  | orchestrator    | \configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
         
-8. Start the tomcat server.
+7. Start the tomcat server.  
+>  **Note:** There might be some error in console for solr war. That can be ignored as solr is used only for sequencing.
   
-9.	The application should be deployed.
+8. The application should be deployed.
 
+9. In case an H2 database connectivity error occurs, verify if the h2-1.3.154 jar is present in lib folder of tomcat.  
+    If not , copy the [h2-connector](https://github.com/github-sumit/fin_banking_bb/blob/master/deploy/local) jar file to lib folder of tomcat.
+    
 10.	Open the following URL 
    
         http://localhost:8080/manager/html

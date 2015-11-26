@@ -4,13 +4,15 @@ Make sure the initial steps for local code setup is followed.
 
 ##1. Configure Tomcat
 
-   1. Open the **tomcat-users.xml** file under ..\apache-tomcat-7.0.65\conf and add below  role and users
+   1. Install Tomcat. 
+   
+   2. Open the **tomcat-users.xml** file under ..\apache-tomcat-7.0.65\conf and add below  role and users
 
         <role rolename="manager-gui"/>
         <role rolename="manager-script"/> 
         <user username="tomcat" password="tomcat" roles="manager-gui,manager-script"/>
 
-   2. Add the following entry within servers definition in settings.xml of maven (.m2 folder) :
+   3. Add the following entry within servers definition in settings.xml of maven (.m2 folder) :
         
         <server>
          <id>TomcatServer</id>
@@ -18,17 +20,25 @@ Make sure the initial steps for local code setup is followed.
 	       <password> tomcat </password>			
         </server>
    
-   3. Add the following entry in settings.xml of Maven(.m2 folder)
+   4. Add the following entry in settings.xml of Maven(.m2 folder)
    
         <pluginGroups>
 	           <pluginGroup>org.apache.tomcat.maven</pluginGroup>
-        </pluginGroups>     
-          
-   4. Goto bin folder in tomcat and run **start.bat** to start the tomcat server.    
+        </pluginGroups> 
+        
+   5. Add then following **CATALINA_OPTS** entry in the **catalina.bat** file under bin folder of tomcat just below setlocal.
+    
+        echo %CATALINA_OPTS%  
+        set CATALINA_OPTS=-XX:PermSize=512m -XX:MaxPermSize=512m           
+
+    >   **Note:**This step is necessary to avoid OutOfMemory exception while deployment. 
+                 
+   6. Goto bin folder in tomcat and run **start.bat** to start the tomcat server.    
    
 ##2. Add Tomcat server to required modules
     
 1. Open the pom.xml in webapps folder (/ArchetypeProject/webapps).
+
 2. Add the tomcat-maven-plugin entry under build tag     
      
     ```xml
@@ -218,11 +228,12 @@ Make sure the initial steps for local code setup is followed.
   
     | **Project**  	| **Path in configuration folder**  	| **Context file name in tomcat**   |  
     |:--------:|:----------------------------:|:---------------------------:|  
-    | portalserver	   | fip_banking_bb-master\configuration\ target\ configuration\local\tomcat\portal 	| portalserver.xml  |  
-    | contentservices 	  | fip_banking_bb-master\configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
-    | orchestrator    | fip_banking_bb-master\configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
+    | portalserver	   | \configuration\ target\ configuration\local\tomcat\portal 	| portalserver.xml  |  
+    | contentservices 	  | \configuration\ target\configuration\local\tomcat\contentservices  | contentservices.xml  |   
+    | orchestrator    | \configuration\target\ configuration\local\tomcat\orchestrator  |  orchestrator.xml  |  
         
    4. Start the tomcat server.
+>  **Note:** There might be some error in console for solr war. That can be ignored as solr is used only for sequencing.
   
    5.	The application should be deployed.
   
